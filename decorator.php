@@ -47,36 +47,6 @@ class Client{
 }
 Client::operation();
 
-/**
- * 对象适配器
- */
-//目标
-interface Target1{
-    public function hello();
-    public function world();
-}
-//源
-class Adaptee1 {
-    public function world(){ echo ' world ';}
-    public function greet(){ echo ' greet ';}
-}
-//适配器
-class Adapter1 implements Target1{
-    public $adaptee;
-    public function __construct(Adaptee1 $adaptee){$this->adaptee=$adaptee;}
-    public function hello(){return $this->adaptee->greet();}
-    public function world(){return $this->adaptee->world();}
-}
-//客户
-class Client1{
-    public static function operation(){
-        $adaptee=new Adaptee1();
-        $adapter=new Adapter1($adaptee);
-        $adapter->hello();
-        $adapter->world();
-    }
-}
-Client1::operation();
 
 /**
  * 装饰器模式与其他相关模式
