@@ -33,7 +33,7 @@ class Originator {
     }
     public function setState($state) { $this->_state = $state; }
     public function getState() { return $this->_state; }
-    public function showState() {}
+    public function showState() {echo $this->_state;}
 }
 // 备忘录(Memento)角色
 class Memento {
