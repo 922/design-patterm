@@ -22,7 +22,7 @@
  * Adapter也可以一次给所有的Adaptee添加功能。
  * 使得重定义Adaptee的行为比较困难。这就需要生成Adaptee的子类并且使得Adapter引用这个子类而不是引用Adaptee本身。
  */
-
+ 
 /**
  * 类适配器
  */
